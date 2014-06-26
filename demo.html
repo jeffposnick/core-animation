@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>core-animation</title>
-    <script src="../platform/platform.js"></script>
+    <script src="../web-animations-next/web-animations.js"></script>
+    <script src="../platform-dev/platform.js"></script>
     <link rel="import" href="core-animation.html">
     <link rel="import" href="core-animation-group.html">
 
@@ -112,11 +113,11 @@
       <polymer-fadein>fade in</polymer-fadein>
  -->    </div>
     <script>
-      var customAnimationFn = function(timeFraction, animation, previousTimeFraction) {
+      var customAnimationFn = function(timeFraction, target, animation) {
         if (timeFraction < 1) {
-          animation.target.textContent = timeFraction;
+          target.textContent = timeFraction;
         } else {
-          animation.target.textContent = 'animated!';
+          target.textContent = 'animated!';
         }
       };
 
