@@ -112,7 +112,7 @@
       <polymer-fadein>fade in</polymer-fadein>
  -->    </div>
     <script>
-      var customAnimationFn = function(timeFraction, target, animation) {
+      var customAnimationFn = function(timeFraction, target) {
         if (timeFraction < 1) {
           target.textContent = timeFraction;
         } else {
